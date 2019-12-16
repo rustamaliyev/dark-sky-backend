@@ -16,6 +16,7 @@ const server = new Hapi.Server({
 
 const server = new Hapi.Server({
   "host": "darksky-backend.herokuapp.com",
+  port: 8000,
   routes: {
     cors: false
   }
