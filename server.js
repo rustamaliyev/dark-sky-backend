@@ -17,7 +17,7 @@ const server = new Hapi.Server({
 const server = new Hapi.Server({
   "host": "darksky-backend.herokuapp.com",
   routes: {
-    cors: true
+    cors: false
   }
 });
 
