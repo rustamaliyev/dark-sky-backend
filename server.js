@@ -4,25 +4,25 @@ let DarkSkyApiParams = "exclude=currently,flags,hourly";
 
 const Hapi = require("hapi");
 const Mongoose = require("mongoose");
-
+/*
 const server = new Hapi.Server({
     "host": "localhost",
-    "port": process.env.PORT,
+    "port": 3001,
     routes: {
       cors: true
     }
 });
+*/
 
-/*
 const server = new Hapi.Server({
   "host": "darksky-backend.herokuapp.com",
-  port: 8080,
+  port: process.env.PORT || 5000,
   routes: {
     cors: false
   }
 });
-*/
-//const server = new Hapi.Server(+process.env.PORT, '0.0.0.0');
+
+const server = new Hapi.Server(+process.env.PORT, '0.0.0.0');
 
 
 let LookupModel = require('./models/lookup.js');
