@@ -15,14 +15,14 @@ const server = new Hapi.Server({
 */
 
 const server = new Hapi.Server({
-  "host": "darksky-backend.herokuapp.com",
+  "host": "0.0.0.0",
   port: process.env.PORT || 5000,
   routes: {
     cors: false
   }
 });
 
-const server = new Hapi.Server(+process.env.PORT, '0.0.0.0');
+//const server = new Hapi.Server(+process.env.PORT, '0.0.0.0');
 
 
 let LookupModel = require('./models/lookup.js');
