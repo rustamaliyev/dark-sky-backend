@@ -4,6 +4,7 @@ let DarkSkyApiParams = "exclude=currently,flags,hourly";
 
 const Hapi = require("hapi");
 const Mongoose = require("mongoose");
+/*
 const server = new Hapi.Server({
     "host": "localhost",
     "port": 3001,
@@ -11,6 +12,16 @@ const server = new Hapi.Server({
       cors: true
     }
 });
+*/
+
+const server = new Hapi.Server({
+  "host": "https://darksky-backend.herokuapp.com/",
+  routes: {
+    cors: true
+  }
+});
+
+
 let LookupModel = require('./models/lookup.js');
 let DayModel = require('./models/day.js');
 //establish connection to atlas mongodb
